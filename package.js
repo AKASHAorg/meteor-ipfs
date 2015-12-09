@@ -33,4 +33,6 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.use('ecmascript');
   api.use('akasha:meteor-ipfs');
+  api.use('sanjo:jasmine@0.20.3');
+  api.addFiles(['tests/ipfsConnector-spec.js'], 'server');
 });
