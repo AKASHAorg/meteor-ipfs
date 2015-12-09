@@ -7,7 +7,7 @@
 ## Example
 
  * On server side create a global variable just before `Meteor.startup`:
- *
+
    ```javascript
 	// for global access on server side
 	ipfsObj = false;
