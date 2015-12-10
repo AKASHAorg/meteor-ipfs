@@ -25,12 +25,19 @@
 	};
 
 	Meteor.startup(function () {
-	  ipfsObj          = new IpfsConnector();
+	  ipfsObj          =  IpfsConnector.getInstance(); //singleton
 	  ipfsObj.setLogLevel('info'); // info is default
 	  testIpfs();
 	});
    ```
+ * Available IpfsConnector methods:
 
+ ```javascript
+ start(); // start ipfs daemon
+ stop();
+ setLogLevel('*'); // one of ['trace', 'fine', 'debug', 'info', 'warn', 'error']
+ api.*; // access ipfs-api https://www.npmjs.com/package/ipfs-api
+ ```
  * Test this package:
 
  ```javascript
