@@ -1,4 +1,4 @@
-const packageVersion = '0.0.2';
+const packageVersion = '0.0.3';
 Package.describe({
   name:          'akasha:meteor-ipfs',
   version:       packageVersion,
@@ -27,7 +27,7 @@ Package.onUse(function (api) {
   api.use('akasha:adm-zip@0.4.7', 'server');
   api.use('akasha:es6-symbol@0.0.1', 'server');
   api.use('practicalmeteor:loglevel@1.1.0_2', 'server');
-  api.addFiles(['lib/ipfsConnector.js'], 'server');
+  api.addFiles(['lib/ipfsConnector.js', 'lib/ipfsServerMethods.js'], 'server');
   api.export('IpfsConnector', 'server');
 });
 
@@ -36,4 +36,5 @@ Package.onTest(function (api) {
   api.use('akasha:meteor-ipfs');
   api.use('sanjo:jasmine@0.20.3');
   api.addFiles(['tests/server/integration/ipfsConnector-spec.js'], 'server');
+  api.addFiles(['tests/client/integration/ipfsMethods-spec.js'], 'client');
 });
