@@ -1,4 +1,4 @@
-const packageVersion = '0.0.3';
+const packageVersion = '0.0.4';
 Package.describe({
   name:          'akasha:meteor-ipfs',
   version:       packageVersion,

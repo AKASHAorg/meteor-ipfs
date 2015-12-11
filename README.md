@@ -38,8 +38,16 @@
  setLogLevel('*'); // one of ['trace', 'fine', 'debug', 'info', 'warn', 'error']
  api.*; // access ipfs-api https://www.npmjs.com/package/ipfs-api
  ```
+ * Server methods for client
+
+ ```
+ Meteor.call('ipfsCat',[ipfsHash], function(err,resp){ ... // get contents from ipfs hash
+  Meteor.call('ipfsAdd',[string or ArrayBuffer, boolean to signal ArrayBuffer], function(err,resp){ ... // upload
+  contents to ipfs
+ ```
+
  * Test this package:
 
  ```javascript
- VELOCITY_TEST_PACKAGES=1 meteor test-packages --driver-package velocity:console-reporter akasha:meteor-ipfs
+ VELOCITY_TEST_PACKAGES=1 meteor test-packages --driver-package velocity:html-reporter akasha:meteor-ipfs
  ```
