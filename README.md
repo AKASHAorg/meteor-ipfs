@@ -41,10 +41,22 @@
  * Server methods for client
 
  ```
- Meteor.call('ipfsCat',[ipfsHash], function(err,resp){ ... // get contents from ipfs hash
-  Meteor.call('ipfsAdd',[string or ArrayBuffer, boolean to signal ArrayBuffer], function(err,resp){ ... // upload
-  contents to ipfs
+ Meteor.call('ipfsCat', ipfsHash, function(err,resp){ ... // get contents from ipfs hash
+
+ Meteor.call('ipfsAdd', string or Uint8Array, function(err,resp){ ... // upload contents to ipfs
  ```
+ * FileReader example
+
+```javascript
+
+    let reader = new FileReader();
+    reader.onload = function(){
+      let arrayBuffer = new Uint8Array(reader.result);
+
+      Meteor.call("ipfsAdd", arrayBuffer, function(err, result){console.log("ipfs hash ",result);});
+    };
+    reader.readAsArrayBuffer('inputFileField'[0]);
+```
 
  * Test this package:
 

@@ -1,4 +1,4 @@
-const packageVersion = '0.0.4';
+const packageVersion = '0.0.5';
 Package.describe({
   name:          'akasha:meteor-ipfs',
   version:       packageVersion,
@@ -18,6 +18,7 @@ Npm.depends({
 Package.onUse(function (api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
+  api.use('ejson');
   api.use('check', 'server');
   api.use('underscore', 'server');
   api.use('sanjo:long-running-child-process@1.1.3', 'server');

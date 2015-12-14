@@ -1,7 +1,7 @@
 akasha:adm-zip@0.4.8
 akasha:es6-symbol@0.0.1
 akasha:fs-extra@0.26.3
-akasha:meteor-ipfs@0.0.3
+akasha:meteor-ipfs@0.0.4
 akasha:request@2.67.1
 akasha:shelljs@0.5.4
 babel-compiler@5.8.24_1
@@ -29,7 +29,7 @@ html-tools@1.0.5
 htmljs@1.0.5
 id-map@1.0.4
 jquery@1.11.4
-local-test:akasha:meteor-ipfs@0.0.3
+local-test:akasha:meteor-ipfs@0.0.4
 logging@1.0.8
 meteor@1.1.10
 minimongo@1.0.10
